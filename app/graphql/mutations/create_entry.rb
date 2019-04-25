@@ -10,7 +10,8 @@ module Mutations
       Entry.create!(
         title: title,
         description: description,
-        body: body
+        body: body,
+        user: context[:current_user]
       )
     end
   end
